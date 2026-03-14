@@ -210,7 +210,7 @@ npm run dev
   </ul>
 </div>
 
-<h3 align="center">Arquitectura backend (apps/api)</h3>
+<h3 align="center">Arquitectura backend</h3>
 
 <div>
   <ul>
@@ -221,7 +221,7 @@ npm run dev
   </ul>
 </div>
 
-<h3 align="center">Arquitectura frontend (apps/web)</h3>
+<h3 align="center">Arquitectura frontend</h3>
 
 <div>
   <ul>
