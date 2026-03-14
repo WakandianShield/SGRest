@@ -378,7 +378,9 @@ SGRest/
 
 <h2 align="center">Screenshots</h2>
 
-
+<div align="center">
+<img src="https://i.imgur.com/LLgI6ul.png" width="700" >
+</div>
 
 <h2 align="center">Contact</h2>
 
