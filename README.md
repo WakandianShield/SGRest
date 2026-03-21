@@ -2,373 +2,450 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white&style=plastic" />
-  <img src="https://img.shields.io/badge/Redis-FF4438?logo=redis&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css&logoColor=white&style=plastic" />
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white&style=plastic" />
 </p>
 
-<div align="center">
-  Sistema ERP SaaS multi-tenant para restaurantes, construido con React y NestJS.
-  Gestiona pedidos en tiempo real, inventario, facturación CFDI 4.0, recursos humanos,
-  contabilidad, inteligencia artificial y predicción de demanda, todo desde una sola plataforma.
+<p align="center">
+  Sistema integral de gestión para restaurantes — web, móvil y backend en tiempo real.
+</p>
 
-  <a href="https://docs.google.com/document/d/1rfRsGS7Xy-bMpo-P5iPa6GtZpTLexa2P6amcXdHuQRY/edit?usp=sharing">Doc.</a>
-</div>
+<br/>
 
 <h2 align="center">Overview</h2>
 
 <p align="center">
-  SGRest ERP es una plataforma web diseñada para digitalizar y automatizar la operación completa
-  de un restaurante. Cada restaurante funciona como un tenant aislado con sus propios datos,
-  usuarios y configuración. El sistema cubre el ciclo completo: desde que un comensal se sienta
-  hasta que paga su cuenta, con notificaciones en tiempo real entre mesero y cocina, descuento
-  automático de inventario por receta, split de cuentas por platillos, predicción semanal de compras
-  con IA, detección de fraudes, modo offline automático y cumplimiento fiscal mexicano (CFDI 4.0, LFT).
+SGRest ERP is a full-stack restaurant management platform designed to digitalize and centralize every aspect of a restaurant's daily operation. It replaces paper-based workflows, verbal communication between staff, and manual accounting with a unified system accessible from any device. The platform covers the complete service cycle — from the moment a customer scans a QR code to place an order, through real-time kitchen coordination, payment processing, and inventory control, all the way to automated weekly performance reports delivered directly to the manager's inbox. Its purpose is to eliminate operational errors, reduce customer wait times, prevent revenue losses, and give owners and managers the real-time data they need to make informed decisions.
 </p>
+
+<br/>
+
 
 <h2 align="center">Features</h2>
 
-<div>
-  <ul>
-    <li><b>Tu cocina y tu sala siempre sincronizadas.</b> Cuando el mesero confirma un pedido, cocina lo ve al instante en pantalla. Cuando el platillo está listo, el mesero recibe una notificación automática. Sin gritos, sin comandas en papel, sin confusiones.</li>
-    <li><b>El inventario se actualiza solo.</b> Cada vez que se vende un platillo, el sistema descuenta los ingredientes de la receta automáticamente. Siempre sabes cuánto tienes sin contar a mano.</li>
-    <li><b>Divide la cuenta sin líos.</b> ¿Un grupo de amigos y cada quien quiere pagar lo suyo? El mesero asigna cada platillo a una persona y el sistema calcula el total de cada quien al instante.</li>
-    <li><b>El sistema te dice qué comprar cada semana.</b> Todos los domingos, la inteligencia artificial analiza lo que se vendió por día y hora, y genera automáticamente una lista de compras para la semana siguiente.</li>
-    <li><b>Factura desde el mismo sistema.</b> Emite tickets de venta y facturas electrónicas CFDI 4.0 timbradas ante el SAT sin salir de la plataforma.</li>
-    <li><b>Toda tu nómina en un solo lugar.</b> Registra turnos, asistencia y el sistema calcula el pago de cada empleado con sus prestaciones conforme a la Ley Federal del Trabajo.</li>
-    <li><b>Tus números siempre actualizados.</b> Cada venta, compra y pago de nómina genera su asiento contable automáticamente. El balance y el estado de resultados siempre están al día.</li>
-    <li><b>Tú decides quién puede hacer qué.</b> Cambia los roles de tu equipo, activa o desactiva permisos por puesto y crea o elimina usuarios desde tu propio panel, sin depender de soporte técnico.</li>
-    <li><b>El sistema sigue funcionando aunque se caiga el internet.</b> Modo offline automático: sigue tomando pedidos, cobrando y enviando a cocina. Todo se sincroniza solo cuando vuelve la conexión.</li>
-    <li><b>El sistema detecta cuando algo está mal.</b> Cancelaciones sospechosas, descuentos excesivos, stock crítico, mesa con espera excesiva. El sistema avisa al manager antes de que se convierta en un problema.</li>
-    <li><b>La IA trabaja para ti todos los días.</b> Detecta los platillos que no se venden, sugiere promociones en horas bajas, identifica cuellos de botella en cocina y mejora sus recomendaciones sola con el tiempo.</li>
-    <li><b>Ve la salud de tu restaurante de un vistazo.</b> Un dashboard con todo lo importante en menos de 10 segundos: ventas del día, ticket promedio, platillo más vendido, hora pico y un indicador general de si el restaurante está bien o tiene problemas.</li>
-  </ul>
-</div>
+<p align="center"><em>What SGRest brings to your restaurant</em></p>
+
+- **Digital menu via QR code** — customers scan, browse, and order directly from their phone with no app download required
+- **Real-time order tracking** — every order update is instantly visible to the customer, waiter, and kitchen simultaneously
+- **Split billing** — divide the check into named accounts per table, with independent payment per guest
+- **Kitchen display panel** — orders arrive organized by table and time, with live timers so nothing gets forgotten
+- **Digital and cash payments** — customers pay digitally or in cash, with the waiter confirming cash payments from their device
+- **Native mobile app for waiters** — iOS and Android app with QR scanner, push notifications, and offline-resilient session
+- **Differentiated push notifications** — distinct sounds for "order ready" and "upcoming reservation", both in foreground and background
+- **Online reservations** — public reservation page, no account needed, with automatic table blocking and advance staff alerts
+- **Inventory management** — track ingredients and supplies, set minimum thresholds, and receive automatic low-stock alerts
+- **Cash closing validation** — end-of-shift cash reconciliation with automatic discrepancy alerts to the manager
+- **Advanced analytics dashboard** — sales charts by day, week, month, quarter, semester, or year with automatic period-over-period comparisons
+- **Anomaly detection** — automatic alerts when unusual cancellations, excessive discounts, or abnormal refunds are detected per employee
+- **Sales prediction** — ingredient purchase suggestions based on historical demand patterns
+- **Restaurant health indicator** — at-a-glance rating (excellent / normal / poor / critical) based on sales, service times, and inventory
+- **Automated weekly reports** — PDF summary sent every Sunday at 7:00 AM to the manager and owner's email
+- **Customer feedback** — optional post-visit rating and comment system, delivered directly to the manager's panel with staff attribution
+- **Multi-tenant architecture** — one platform, multiple independent restaurants, each with fully isolated data
+- **Role-based access control** — every user sees only what their role allows, from superadmin down to host
+
+<br/>
 
 <h2 align="center">Tech Stack</h2>
+<div align="center">
 
-<div>
-  <ul>
-    <li><b>Frontend:</b> React · JavaScript · CSS3 · Socket.IO</li>
-    <li><b>Módulo Inventario:</b> HTML + CSS + JS Vanilla</li>
-    <li><b>Backend:</b> NestJS · TypeScript · Prisma · PostgreSQL · Socket.IO · Helmet.js</li>
-    <li><b>Base de datos:</b> PostgreSQL con schema isolation por tenant</li>
-    <li><b>Infraestructura:</b> Railway (activo) → AWS ECS Fargate + RDS (futuro) · GitHub Actions CI/CD · Cloudflare</li>
-    <li><b>Autenticación:</b> Login · Argon2id · JWT · RS256 en httpOnly cookie</li>
-    <li><b>Notificaciones:</b> SendGrid (email) · Twilio (WhatsApp)</li>
-  </ul>
+  <p align="center"><em>Technologies used across the three repositories</em></p>
+  
+  | Layer | Technology | Purpose |
+  |---|---|---|
+  | Backend framework | NestJS + TypeScript | Modular server with strict typing, REST API, and WebSocket support |
+  | ORM & migrations | Prisma | Type-safe database access and versioned schema migrations |
+  | Database | PostgreSQL | Relational database with schema isolation per restaurant tenant |
+  | Real-time | Socket.IO | Bidirectional event propagation across all connected devices |
+  | Password hashing | Argon2id | Industry-standard resistant hashing for stored credentials |
+  | Authentication | JWT RS256 + httpOnly cookie | Signed tokens stored securely, inaccessible from client JavaScript |
+  | HTTP security | Helmet.js | Automatic security headers on every server response |
+  | Frontend | React + JavaScript + CSS3 | Web interface for staff, customers (QR menu), and admin panels |
+  | Inventory module | HTML5 + CSS3 + JavaScript | Lightweight vanilla interface for stock management |
+  | Mobile app | React Native + Expo | Native iOS and Android app for waiters |
+  | Mobile auth storage | Expo SecureStore | Encrypted JWT storage on mobile devices |
+  | Push notifications | Expo Push Notifications | Sound-differentiated push alerts for waiters |
+  | Email & reports | SendGrid | Automated weekly PDF reports and alert emails |
+  | Infrastructure (dev) | Railway | Fast low-cost deployment for development and testing |
+  | Infrastructure (prod) | AWS ECS Fargate + RDS | Auto-scaling containers and managed database for production |
+  | CI/CD | GitHub Actions + Expo EAS Build | Automated testing, deployment, and mobile build pipelines |
+  | CDN & proxy | Cloudflare | TLS, DDoS protection, and global content distribution |
 </div>
+
+<br/>
 
 <h2 align="center">System Requirements</h2>
 
-<div>
-  <ul>
-    <li><b>Node.js:</b> 20.0 o superior</li>
-    <li><b>npm:</b> 10.0 o superior</li>
-    <li><b>Git:</b> 2.40 o superior</li>
-    <li><b>PostgreSQL:</b> 16.0 o superior (instalacion nativa)</li>
-    <li><b>Sistema operativo:</b> Windows, Linux o macOS</li>
-  </ul>
-</div>
+<p align="center"><em>What you need installed before running the project locally</em></p>
+
+**Runtime & package managers**
+- Node.js v20 or higher
+- npm v9 or higher (comes with Node.js)
+- Git
+
+**Database**
+- PostgreSQL 15 or higher (running locally or via Docker)
+
+**Mobile development** *(only if working on the mobile app)*
+- Expo CLI (`npm install -g expo-cli`)
+- Expo Go app on a physical device, or a configured iOS/Android emulator
+- For iOS builds: macOS with Xcode 14 or higher
+- For Android builds: Android Studio with SDK 33 or higher
+
+**Operating system**
+- macOS 12 or higher
+- Windows 10/11 (WSL2 recommended for best compatibility)
+- Ubuntu 20.04 or higher / any modern Linux distro
+
+**Devices for mobile app**
+- iOS 15 or higher
+- Android 10 or higher
+
+<br/>
 
 <h2 align="center">Installation</h2>
 
-<div>
-  <ol>
-    <li>Clona el repositorio y entra al proyecto:</li>
-  </ol>
-</div>
+<p align="center"><em>Clone the repository and navigate into the project</em></p>
 
 ```bash
 git clone https://github.com/WakandianShield/SGRest.git
 cd SGRest
 ```
 
-<div>
-  <ol>
-    <li>Instala dependencias JavaScript/TypeScript del monorepo:</li>
-  </ol>
-</div>
+<br/>
 
-```bash
-npm install
-```
-
-<div>
-  <ul>
-    <li>La instalación deja listas las tecnologías y frameworks, sin implementar lógica de negocio.</li>
-    <li>Inventario permanece en frontend vanilla (HTML/CSS/JS).</li>
-  </ul>
-</div>
 
 <h2 align="center">Database Configuration</h2>
 
-<div>
-  <ol>
-    <li>Copia el archivo de variables de entorno:</li>
-  </ol>
-</div>
+<p align="center"><em>Coming soon</em></p>
 
-```bash
-# Linux/macOS
-cp .env.example .env
-
-# Windows PowerShell
-Copy-Item .env.example .env
-```
-
-<div>
-  <ol>
-    <li>Inicia PostgreSQL manualmente:</li>
-  </ol>
-</div>
-
-```bash
-# Windows PowerShell (ejemplo)
-Get-Service | Where-Object { $_.Name -like "postgres*" }
-Start-Service <postgres_service_name>
-
-# Linux (systemd)
-sudo systemctl start postgresql
-
-# macOS (Homebrew)
-brew services start postgresql@16
-```
-
-<div>
-  <ol>
-    <li>Crea la base de datos local si aun no existe:</li>
-  </ol>
-</div>
-
-```bash
-psql -U postgres -c "CREATE DATABASE sgrest;"
-```
-
-<div>
-  <ul>
-    <li><code>.env.example</code> ya incluye defaults locales funcionales:</li>
-    <li><code>DATABASE_URL=postgresql://postgres:TU_PASSWORD_POSTGRES@localhost:5432/sgrest?schema=public</code></li>
-    <li><code>REDIS_URL=redis://localhost:6379</code></li>
-    <li>Actualiza <code>TU_PASSWORD_POSTGRES</code> en <code>.env</code> con tu password real.</li>
-    <li>PostgreSQL y Redis ya están contemplados por las dependencias de API (<code>prisma</code>, <code>@prisma/client</code>, <code>ioredis</code>, <code>bullmq</code>).</li>
-    <li>Credenciales OAuth y proveedores externos (SendGrid/Twilio) pueden quedarse vacías en etapa de scaffold local.</li>
-    <li>El diseño objetivo es multi-tenant por schema isolation en PostgreSQL.</li>
-  </ul>
-</div>
+<br/>
 
 <h2 align="center">How to Run</h2>
 
-```bash
-# 1) Asegura que PostgreSQL y Redis ya esten iniciados manualmente
+<p align="center"><em>Coming soon</em></p>
 
-# 2) Inicia API + Web
-npm run dev
-```
-
-<div>
-  <ul>
-    <li><code>npm run dev</code> — ejecuta API (NestJS) y Web (React) en paralelo.</li>
-    <li><code>npm run dev:api</code> — API local en <code>http://localhost:3000/api</code>.</li>
-    <li><code>npm run dev:web</code> — frontend local en <code>http://localhost:4000</code>.</li>
-    <li><code>npm run dev:worker</code> — ejecuta <code>apps/analytics-worker</code> (cuando se agregue script real del worker).</li>
-  </ul>
-</div>
+<br/>
 
 <h2 align="center">Architecture</h2>
 
-<h3 align="center">Patrón general</h3>
+<p align="center">
+SGRest is split into three independent repositories under a vertical slicing architecture — each feature owns all its layers from the API endpoint down to the database query. The system uses Hexagonal Architecture in the backend to keep business rules isolated from frameworks and external services, and a feature-based modular structure in both the frontend and mobile app so each domain area is self-contained and easy to work on independently.
+</p>
 
-<div>
-  <ul>
-    <li><b>Monolito modular</b> organizado en <b>Vertical Slicing + Clean Architecture (Hexagonal)</b> en backend.</li>
-    <li><b>Multi-tenancy</b> por schema isolation en PostgreSQL ya que cada restaurante tiene su propio schema aislado. Los datos de un restaurante nunca se mezclan con los de otro.</li>
-    <li><b>Tiempo real</b> con Socket.IO Gateway en NestJS para KDS, actualizaciones de mesas y notificaciones entre roles.</li>
-  </ul>
+<br/>
+
+<h3 align="center">Backend</h3>
+
+<p align="center">
+The backend is a NestJS server organized into domain modules. Each module contains everything it needs to function: its business rules, its use cases, and its connection to the database and external services. Nothing leaks between modules except through explicit interfaces.
+</p>
+<div align="center">
+  <p align="center"><strong>Folder structure and purpose</strong></p>
+  
+  | Folder | What it does |
+  |---|---|
+  | `shared/guards/` | Checks that the user is authenticated and has the right role before any request reaches a module |
+  | `shared/decorators/` | Utility annotations used across modules, like extracting the current user from a request |
+  | `shared/filters/` | Catches errors and formats them into consistent HTTP responses |
+  | `shared/interceptors/` | Runs logic before and after every request, like logging |
+  | `shared/pipes/` | Validates and transforms incoming request data before it reaches the module |
+  | `shared/exceptions/` | Base error types that all modules use to signal business rule violations |
+  | `shared/prisma/` | The single shared database connection used by all modules |
+  | `{module}/application/use-cases/` | One file per user action — "create order", "cancel order", "mark as ready". This is where the logic of what happens when someone does something lives |
+  | `{module}/domain/entities/` | The core objects of the module — Order, Table, Payment. They hold data and enforce their own rules |
+  | `{module}/domain/value-objects/` | Small objects with validation built in — OrderStatus, Price, QRCode |
+  | `{module}/domain/services/` | Logic that involves more than one entity and doesn't belong to either one alone |
+  | `{module}/domain/ports/` | Interfaces that define what the module needs from the outside world, without caring how it's implemented |
+  | `{module}/infrastructure/adapters/` | Concrete implementations of the ports — how to actually talk to Socket.IO, SendGrid, Expo, etc. |
+  | `{module}/infrastructure/persistence/` | How the module reads and writes its data to PostgreSQL via Prisma |
+  | `{module}/infrastructure/controllers/` | The HTTP endpoints and WebSocket gateways — the entry points into the module |
+  | `{module}/infrastructure/controllers/dto/` | Data shape definitions for what the API expects to receive |
+
+  <br/>
+  
+  <p align="center"><strong>Backend modules</strong></p>
+  
+  | Module | What it handles |
+  |---|---|
+  | `auth` | Login, logout, token generation and validation, session management |
+  | `users` | Creating, editing, and deactivating employee accounts |
+  | `tables` | Table lifecycle: activation via QR, status tracking, split accounts |
+  | `orders` | Customer orders: cart, item states, real-time updates |
+  | `kitchen` | Kitchen panel: order queue, timers, status updates |
+  | `payments` | Billing, digital payments, cash confirmation, table closing |
+  | `inventory` | Ingredient tracking, stock thresholds, low-stock alerts |
+  | `reservations` | Online reservations, availability, advance staff notifications |
+  | `analytics` | Sales summaries, comparisons, anomaly detection, demand prediction |
+  | `reports` | PDF report generation and automated Sunday email delivery |
+  | `notifications` | Email via SendGrid and push notifications via Expo |
+  | `feedback` | Customer ratings and comments, delivered to manager panel |
+  
+  <br/>
+
+  <p align="center"><strong>Roles</strong></p>
+  
+  | Role | Access level |
+  |---|---|
+  | `superadmin` | Full platform control — manages restaurants, accounts, and global permissions |
+  | `owner` | Full access to their restaurant — analytics, reports, staff, and settings |
+  | `manager` | Operational control — employees, inventory, anomaly alerts, and analytics |
+  | `waiter` | Table activation, order management, payment confirmation |
+  | `kitchen` | Kitchen panel — view and update order states |
+  | `cashier` | End-of-shift cash closing and reconciliation |
+  | `host` | View estimated wait times for table assignment |
 </div>
 
-<h3 align="center">Arquitectura backend</h3>
+<br/>
 
-<div>
-  <ul>
-    <li><b>ui/</b>: Capa de entrada/salida. Expone endpoints y traduce request/response.</li>
-    <li><b>application/</b>: Capa de orquestación. Contiene casos de uso que coordinan las reglas del negocio.</li>
-    <li><b>domain/</b>: Núcleo del negocio. Define modelo, invariantes y contratos sin frameworks.</li>
-    <li><b>infrastructure/</b>: Capa técnica. Implementa persistencia, mensajería e integraciones externas.</li>
-  </ul>
+<h3 align="center">Frontend</h3>
+
+<p align="center">
+The frontend is a React application organized by feature module. Each module owns its pages, components, hooks, services, and styles. Shared UI elements and utilities live in a common layer. The core layer handles global concerns like authentication, the API client, and the WebSocket connection.
+</p>
+<div align="center">
+  <p align="center"><strong>Folder structure and purpose</strong></p>
+  
+  | Folder | What it does |
+  |---|---|
+  | `app/` | Wires everything together — routing, global providers, and layout shells per role |
+  | `app/layouts/` | Page frames for each role: admin panel layout, waiter layout, kitchen layout, public layout |
+  | `core/api/` | The configured HTTP client used by all modules to talk to the backend |
+  | `core/auth/` | Session context, login state, and route protection per role |
+  | `core/socket/` | The WebSocket connection shared across all modules for real-time updates |
+  | `core/config/` | Environment variables and global constants |
+  | `core/errors/` | Global error boundary and error handling utilities |
+  | `shared/components/` | Reusable UI elements used across multiple modules: buttons, modals, inputs, badges, spinners |
+  | `shared/hooks/` | Reusable logic hooks: socket subscription, browser notifications with sound, debounce |
+  | `shared/services/` | Base HTTP service wrapper used by all module services |
+  | `shared/styles/` | Design tokens, CSS variables, and global reset |
+  | `shared/types/` | Shared data type definitions used across modules |
+  | `shared/utils/` | Formatting helpers for dates and currency |
+  | `shared/constants/` | Status enumerations: ORDER_STATUS, TABLE_STATUS, PAYMENT_STATUS |
+  | `{module}/pages/` | Full-page views for that module's routes |
+  | `{module}/components/` | UI components specific to that module |
+  | `{module}/hooks/` | Business and UI logic hooks specific to that module |
+  | `{module}/services/` | HTTP calls to the backend for that module |
+  | `{module}/styles/` | Module-specific styles and local tokens |
+  | `inventory/` | Exception module — built in plain HTML, CSS, and JavaScript (no React) |
+  | `admin/` | Manager and owner panel: employees, cash closing, feedback, and settings |
+  
+  <br/>
+  
+  <p align="center"><strong>Frontend modules</strong></p>
+  
+  | Module | What it handles |
+  |---|---|
+  | `auth` | Login page, logout, role-based route guards |
+  | `tables` | Table map, QR activation, split account setup |
+  | `orders` | Customer digital menu, cart, order tracking |
+  | `kitchen` | Kitchen display panel with timers and filters |
+  | `payments` | Customer checkout, waiter cash confirmation |
+  | `inventory` | Stock registration and updates (HTML+CSS+JS) |
+  | `reservations` | Public reservation page and waiter reservation panel |
+  | `analytics` | Dashboard, sales charts, anomaly alerts, predictions |
+  | `reports` | Report download by date range |
+  | `admin` | Employee management, cash closing, feedback, settings |
+  
+  <br/>
+  
+  <p align="center"><strong>Roles</strong></p>
+  
+  | Role | What they access in the frontend |
+  |---|---|
+  | `superadmin` | Global platform panel — restaurants and accounts |
+  | `owner` | Full admin panel — analytics, reports, staff, settings |
+  | `manager` | Admin panel — staff, inventory, alerts, analytics, reports |
+  | `waiter` | Table map, order management, payment confirmation |
+  | `kitchen` | Kitchen display panel |
+  | `cashier` | Cash closing screen |
+  | `host` | Wait time display |
+  | Customer | QR menu, cart, order tracking, checkout, feedback |
 </div>
 
-<h3 align="center">Arquitectura frontend</h3>
+<br/>
 
-<div>
-  <ul>
-    <li><b>React por módulos de negocio</b> alineados con backend (auth, inventory, orders, etc.).</li>
-    <li><b>Contrato por módulo frontend:</b> <code>pages/</code>, <code>components/</code>, <code>hooks/</code>, <code>services/</code>, <code>styles/</code>.</li>
-  </ul>
+<h3 align="center">Mobile</h3>
+
+<p align="center">
+The mobile app is built with React Native and Expo. It mirrors the frontend's module structure with one key difference: screens replace pages, and navigation is handled natively. It is designed specifically for waiters operating on the floor, keeping only the modules they need. Notifications with differentiated sounds are a first-class feature handled at the core level.
+</p>
+
+<div align="center">
+  <p align="center"><strong>Folder structure and purpose</strong></p>
+  
+  | Folder | What it does |
+  |---|---|
+  | `app/navigation/` | Native navigation stack — switches between auth screens and the waiter tab navigator |
+  | `app/providers.tsx` | Global providers: authentication context and WebSocket context |
+  | `core/api/` | Same HTTP client as the frontend — connects to the same backend API |
+  | `core/auth/` | Session management using Expo SecureStore instead of browser cookies |
+  | `core/socket/` | WebSocket connection for real-time order and table updates |
+  | `core/notifications/` | Expo Notifications setup, iOS/Android permission requests, sound files, foreground and background handlers |
+  | `core/config/` | Environment variables for the mobile environment |
+  | `shared/components/` | Reusable native UI components: AppButton, AppBadge, AppModal, AppSpinner |
+  | `shared/hooks/` | Shared logic hooks — same useSocket and useNotification as the frontend |
+  | `shared/services/` | Same HTTP service wrapper as the frontend |
+  | `shared/styles/` | Global StyleSheet tokens for consistent spacing, colors, and typography |
+  | `shared/types/` | Same type definitions as the frontend |
+  | `shared/utils/` | Date and currency formatters |
+  | `shared/constants/` | Same status enumerations as the frontend |
+  | `{module}/screens/` | Full-screen views for that module (equivalent to pages in the frontend) |
+  | `{module}/components/` | Native UI components specific to that module |
+  | `{module}/hooks/` | Same business logic hooks as the frontend where possible |
+  | `{module}/services/` | Same HTTP service calls as the frontend |
+  | `tables/` | Includes the QR scanner screen using Expo Camera |
+  
+  <br/>
+  
+  <p align="center"><strong>Mobile modules</strong></p>
+  
+  | Module | What it handles |
+  |---|---|
+  | `auth` | Login with secure token storage, logout |
+  | `tables` | Table list, QR scanner for activation, table detail |
+  | `orders` | Active orders per table, item status updates |
+  | `kitchen` | Kitchen display panel (optional, tablet-oriented) |
+  | `payments` | Cash payment confirmation screen |
+  | `reservations` | Today's reservations and incoming reservation notifications |
+  
+  <br/>
+  
+  <p align="center"><strong>Roles</strong></p>
+  
+  | Role | What they access in the mobile app |
+  |---|---|
+  | `waiter` | Full app access — tables, orders, payments, reservations |
+  | `kitchen` | Kitchen screen only |
 </div>
-
-<h3 align="center">Arquitectura para escalar a 30+ restaurantes</h3>
-
-<div>
-  <ul>
-    <li><b>Tenancy transversal</b>: Contexto de tenant propagado en request, jobs y eventos.</li>
-    <li><b>Idempotencia</b>: Previene duplicados en operaciones críticas (cobro, facturación, descuentos de inventario).</li>
-    <li><b>Outbox + mensajería</b>: Publica eventos de forma consistente sin acoplar la transacción al broker.</li>
-    <li><b>Observabilidad</b>: Logging, métricas y trazas con contexto multi-tenant.</li>
-    <li><b>Resiliencia</b>: Políticas de timeout, retry y circuit-breaker por integración.</li>
-  </ul>
-</div>
-
-<h3 align="center">Vertical slices</h3>
-
-<div>
-  <ul>
-    <li><code>auth</code>: Login, sesiones y seguridad</li>
-    <li><code>inventory</code>: Ingredientes, vajilla, movimientos de stock, merma y alertas</li>
-    <li><code>menu</code>: Platillos, categorías, recetas, disponibilidad y análisis de márgenes</li>
-    <li><code>orders</code>: Mesas, pedidos, cobro, split de cuentas y menú QR</li>
-    <li><code>kitchen</code>: Cocina / KDS: flujo de preparación y temporizadores</li>
-    <li><code>billing</code>: Tickets, facturación CFDI 4.0 y cierre de caja</li>
-    <li><code>purchasing</code>: Compras, proveedores y cuentas por pagar</li>
-    <li><code>hr</code>: Empleados, turnos, asistencia y nómina</li>
-    <li><code>accounting</code>: Contabilidad y asientos automáticos</li>
-    <li><code>analytics</code>: Dashboard, reportes, predicción de demanda, métricas por empleado y salud del restaurante</li>
-    <li><code>permissions</code>: Roles y permisos granulares por restaurante</li>
-    <li><code>notifications</code>: Correo, WhatsApp, alertas en tiempo real y reporte ejecutivo semanal</li>
-    <li><code>admin-panel</code>: Administración global multi-restaurante</li>
-    <li><code>offline</code>: Modo sin internet: guarda localmente y sincroniza al reconectar</li>
-    <li><code>reservations</code>: Reservaciones con predicción de tiempo de liberación de mesa</li>
-    <li><code>intelligence</code>: IA avanzada: fraudes, promociones automáticas, optimización de mesas, precios y simulador de crecimiento</li>
-  </ul>
-</div>
-
-<h3 align="center">Roles del sistema</h3>
-
-<div>
-  <ul>
-    <li><code>super_admin:</code> Dueño del sistema. Panel separado con acceso total a todos los restaurantes, usuarios y configuración global.</li>
-    <li><code>owner:</code> Dueño del restaurante. Acceso completo a su tenant: finanzas, reportes, operación y configuración.</li>
-    <li><code>manager:</code> Gestiona el turno, cobra mesas, hace corte de caja y administra usuarios, roles y permisos de su restaurante.</li>
-    <li><code>chef:</code> Opera el KDS, acepta pedidos, los marca como listos y gestiona la disponibilidad de platillos.</li>
-    <li><code>waiter:</code> Toma pedidos, gestiona mesas y aplica split de cuentas por platillos.</li>
-    <li><code>hr:</code> Encargado de Recursos Humanos. Registra empleados, turnos y asistencia, calcula y aprueba nómina, gestiona prestaciones y contratos conforme a la LFT.</li>
-    <li><code>purchasing:</code> Encargado de Compras. Gestiona el catálogo de proveedores, genera y envía órdenes de compra, recibe mercancía y actualiza el inventario, y gestiona corte de caja.</li>
-    <li><code>readonly:</code> Solo lectura. Para auditores, contadores externos o inversores.</li>
-  </ul>
-</div>
+<br/>
 
 <h2 align="center">Project Structure</h2>
 
-```text
+```
 SGRest/
 │
-├─ apps/                                    → Las aplicaciones que corren el sistema.
-│  ├─ backend/                              → El servidor principal. Aquí vive toda la lógica del negocio.
-│  │  ├─ package.json                       → Dependencias y scripts del servidor.
-│  │  ├─ tsconfig.json                      → Configuración de TypeScript del servidor.
-│  │  │
-│  │  └─ src/
-│  │     │
-│  │     ├─ shared/                         → Código que usan varios módulos a la vez.
-│  │     │
-│  │     └─ modules/                        → Un módulo por cada área del negocio.
-│  │        │
-│  │        ├─ auth/                        → Login, sesiones y seguridad.
-│  │        ├─ inventory/                   → Ingredientes, vajilla, movimientos de stock y merma.
-│  │        ├─ menu/                        → Platillos, categorías, recetas y márgenes de ganancia.
-│  │        ├─ orders/                      → Mesas, pedidos, cobro, split y menú QR.
-│  │        ├─ kitchen/                     → Pantalla de cocina (KDS).
-│  │        ├─ billing/                     → Tickets, facturas CFDI y corte de caja.
-│  │        ├─ purchasing/                  → Compras, proveedores y cuentas por pagar.
-│  │        ├─ hr/                          → Empleados, turnos, asistencia y nómina.
-│  │        ├─ accounting/                  → Contabilidad y asientos automáticos.
-│  │        ├─ analytics/                   → Dashboard, reportes, métricas y salud del restaurante.
-│  │        ├─ permissions/                 → Roles y permisos por restaurante.
-│  │        ├─ admin-panel/                 → Panel global para administrar todos los restaurantes.
-│  │        ├─ notifications/               → Correos, WhatsApp, alertas y reportes ejecutivos.
-│  │        ├─ offline/                     → Modo sin internet: guarda localmente y sincroniza.
-│  │        ├─ reservations/                → Reservaciones con predicción de ocupación.
-│  │        └─ intelligence/                → IA avanzada: fraudes, promociones, precios y simulador.
-│  │        │
-│  │        └─ {módulo}/                    → Cada módulo tiene siempre estas 4 carpetas.
-│  │           ├─ application/              → Coordina qué pasa cuando llega una acción.
-│  │           │  └─ use-cases/             → Cada caso de uso es una acción concreta del usuario.
-│  │           ├─ domain/                   → Las reglas de negocio puras del módulo.
-│  │           │  ├─ entities/              → Las cosas que existen en este módulo.
-│  │           │  ├─ value-objects/         → Datos con validaciones propias.
-│  │           │  ├─ aggregates/            → Entidades que se guardan y consultan juntas.
-│  │           │  ├─ services/              → Reglas que involucran más de una entidad.
-│  │           │  ├─ events/                → Lo que este módulo avisa cuando algo pasa.
-│  │           │  └─ ports/                 → Qué necesita este módulo del exterior.
-│  │           ├─ infrastructure/           → Cómo se conecta el módulo con la tecnología real.
-│  │           │  ├─ adapters/              → Implementaciones concretas de los puertos.
-│  │           │  ├─ persistence/           → Cómo guarda y lee datos este módulo.
-│  │           │  └─ config/                → Configuración específica de este módulo.
-│  │           └─ ui/                       → La puerta de entrada al módulo.
-│  │              └─ controllers/           → Los endpoints HTTP de este módulo.
+├── backend/
+│   ├── prisma/
+│   │   └── migrations/
+│   ├── .github/
+│   │   └── workflows/
+│   └── src/
+│      ├── shared/
+│      │   ├── guards/
+│      │   ├── decorators/
+│      │   ├── filters/
+│      │   ├── interceptors/
+│      │   ├── pipes/
+│      │   ├── exceptions/
+│      │   └── prisma/
+│      └── modules/
+│         ├── auth/
+│         │   ├── application/
+│         │   │   └── use-cases/
+│         │   ├── domain/
+│         │   │   ├── entities/
+│         │   │   ├── value-objects/
+│         │   │   ├── services/
+│         │   │   └── ports/
+│         │   └── infrastructure/
+│         │       ├── adapters/
+│         │       ├── persistence/
+│         │       └── controllers/
+│         │           └── dto/
+│         ├── tables/
+│         ├── orders/
+│         ├── kitchen/
+│         ├── payments/
+│         ├── inventory/
+│         ├── reservations/
+│         ├── analytics/
+│         ├── reports/
+│         ├── notifications/
+│         ├── users/
+│         └── feedback/
 │
-│  ├─ frontend/                             → El frontend que usan los empleados del restaurante.
-│  │  ├─ package.json                       → Dependencias y scripts del servidor.
-│  │  ├─ tsconfig.json                      → Configuración de TypeScript del servidor.
-│  │  │
-│  │  └─ src/
-│  │     ├─ app/                            → Composición global (router, providers, layouts).
-│  │     ├─ core/                           → Capacidades técnicas globales (api, auth, config, state, errors).
-│  │     ├─ shared/                         → Reutilizables transversales.
-│  │     │  ├─ components/
-│  │     │  ├─ hooks/
-│  │     │  ├─ services/
-│  │     │  ├─ styles/
-│  │     │  ├─ types/
-│  │     │  ├─ utils/
-│  │     │  └─ constants/
-│  │     └─ modules/                        → Un módulo React por dominio de negocio.
-│  │        ├─ auth/
-│  │        ├─ inventory/
-│  │        ├─ menu/
-│  │        ├─ orders/
-│  │        ├─ kitchen/
-│  │        ├─ billing/
-│  │        ├─ purchasing/
-│  │        ├─ hr/
-│  │        ├─ accounting/
-│  │        ├─ analytics/
-│  │        ├─ permissions/
-│  │        ├─ admin-panel/
-│  │        ├─ notifications/
-│  │        ├─ reservations/
-│  │        └─ intelligence/
-│  │           ├─ pages/                    → Pantallas por ruta del módulo.
-│  │           ├─ components/               → Componentes de UI del módulo.
-│  │           ├─ hooks/                    → Hooks de negocio/UI del módulo.
-│  │           ├─ services/                 → Clientes HTTP y adaptadores del módulo.
-│  │           └─ styles/                   → Estilos y tokens locales del módulo.
-│  │
-│  └─ analytics-worker/                     → Proceso que corre de noche para generar predicciones.
-│     └─ package.json
+├── frontend/
+│   ├── .github/
+│   │   └── workflows/
+│   └── src/
+│      ├── app/
+│      │   └── layouts/
+│      ├── core/
+│      │   ├── api/
+│      │   ├── auth/
+│      │   ├── socket/
+│      │   ├── config/
+│      │   └── errors/
+│      ├── shared/
+│      │   ├── components/
+│      │   ├── hooks/
+│      │   ├── services/
+│      │   ├── styles/
+│      │   ├── types/
+│      │   ├── utils/
+│      │   └── constants/
+│      ├── orders/
+│      ├── tables/
+│      ├── kitchen/
+│      ├── payments/
+│      ├── reservations/
+│      ├── analytics/
+│      ├── reports/
+│      ├── inventory/
+│      │   └── styles/
+│      └── admin/
+│          ├── pages/
+│          ├── components/
+│          ├── hooks/
+│          ├── services/
+│          └── styles/
 │
-├─ .env.example                             → Variables de entorno que hay que configurar antes de correr el proyecto.
-├─ .gitignore
-├─ package.json                             → Scripts y configuración raíz del monorepo.
-└─ tsconfig.base.json                       → Configuración base de TypeScript para todo el proyecto.
+└── mobile/
+    ├── .github/
+    │   └── workflows/
+    └── src/
+       ├── app/
+       │   └── navigation/
+       ├── core/
+       │   ├── api/
+       │   ├── auth/
+       │   ├── socket/
+       │   ├── notifications/
+       │   └── config/
+       ├── shared/
+       │   ├── components/
+       │   ├── hooks/
+       │   ├── services/
+       │   ├── styles/
+       │   ├── types/
+       │   ├── utils/
+       │   └── constants/
+       ├── orders/
+       ├── tables/
+       ├── kitchen/
+       ├── payments/
+       └── reservations/
 ```
+
+<br/>
 
 <h2 align="center">Screenshots</h2>
 
-<div align="center">
-<img src="https://i.imgur.com/LLgI6ul.png" width="700" >
-</div>
+<p align="center">
+  <img src="https://i.imgur.com/LLgI6ul.png" width="700">
+</p>
+
+<br/>
 
 <h2 align="center">Contact</h2>
 
 <p align="center">
-  If you would like to provide feedback or share ideas, you can contact me through my GitHub profile or social media.
-  <br><br>
-  <b>Note:</b> Some files contain explanatory information in Spanish.
+If you would like to provide feedback or share ideas, you can contact me through my GitHub profile or social media.<br/>
+<em>Note: Some files contain explanatory information in Spanish.</em>
 </p>
