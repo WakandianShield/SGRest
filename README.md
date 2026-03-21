@@ -13,7 +13,7 @@
 
 <p align="center">
   Sistema integral de gestión para restaurantes con web, móvil y backend en tiempo real.
-  <a href?"https://docs.google.com/document/d/1rfRsGS7Xy-bMpo-P5iPa6GtZpTLexa2P6amcXdHuQRY/edit?usp=sharing" >Documentation</a>
+  <a href="https://docs.google.com/document/d/1rfRsGS7Xy-bMpo-P5iPa6GtZpTLexa2P6amcXdHuQRY/edit?usp=sharing" >Documentation</a>
 </p>
 
 <br/>
