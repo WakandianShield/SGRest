@@ -1,4 +1,4 @@
-<h1 align="center">SGRest ERP</h1>
+<h1 align="center">SGRest</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white&style=plastic" />
