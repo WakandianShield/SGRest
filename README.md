@@ -55,13 +55,12 @@
 
 <div>
   <ul>
-    <li><b>Frontend:</b> React · JavaScript · CSS3 puro con metodología BEM · Socket.IO</li>
+    <li><b>Frontend:</b> React · JavaScript · CSS3 · Socket.IO</li>
     <li><b>Módulo Inventario:</b> HTML + CSS + JS Vanilla</li>
-    <li><b>Backend:</b> NestJS · TypeScript · Prisma · PostgreSQL · Redis · BullMQ · Socket.IO · JWT · Argon2id · Helmet.js</li>
-    <li><b>Worker de Analytics e IA:</b> Python · FastAPI · Pandas · Celery</li>
-    <li><b>Base de datos:</b> PostgreSQL con schema isolation por tenant · Redis 7</li>
+    <li><b>Backend:</b> NestJS · TypeScript · Prisma · PostgreSQL · Socket.IO · Helmet.js</li>
+    <li><b>Base de datos:</b> PostgreSQL con schema isolation por tenant</li>
     <li><b>Infraestructura:</b> Railway (activo) → AWS ECS Fargate + RDS (futuro) · GitHub Actions CI/CD · Cloudflare</li>
-    <li><b>Autenticación:</b> OAuth 2.0 manual (Google, Microsoft, Apple) · login local · JWT RS256 en httpOnly cookie</li>
+    <li><b>Autenticación:</b> Login · Argon2id · JWT · RS256 en httpOnly cookie</li>
     <li><b>Notificaciones:</b> SendGrid (email) · Twilio (WhatsApp)</li>
   </ul>
 </div>
@@ -74,9 +73,6 @@
     <li><b>npm:</b> 10.0 o superior</li>
     <li><b>Git:</b> 2.40 o superior</li>
     <li><b>PostgreSQL:</b> 16.0 o superior (instalacion nativa)</li>
-    <li><b>Redis:</b> 7.0 o superior (instalacion nativa)</li>
-    <li><b>Python:</b> 3.11+ (para <code>analytics-worker</code>)</li>
-    <li><b>pip:</b> 23+ para instalación de dependencias del worker</li>
     <li><b>Sistema operativo:</b> Windows, Linux o macOS</li>
   </ul>
 </div>
@@ -105,16 +101,6 @@ npm install
 ```
 
 <div>
-  <ol>
-    <li>Instala dependencias Python del worker (opcional para correr solo API + Web + DB):</li>
-  </ol>
-</div>
-
-```bash
-python -m pip install -r apps/analytics-worker/requirements.txt
-```
-
-<div>
   <ul>
     <li>La instalación deja listas las tecnologías y frameworks, sin implementar lógica de negocio.</li>
     <li>Inventario permanece en frontend vanilla (HTML/CSS/JS).</li>
@@ -139,7 +125,7 @@ Copy-Item .env.example .env
 
 <div>
   <ol>
-    <li>Inicia PostgreSQL y Redis manualmente:</li>
+    <li>Inicia PostgreSQL manualmente:</li>
   </ol>
 </div>
 
@@ -147,15 +133,12 @@ Copy-Item .env.example .env
 # Windows PowerShell (ejemplo)
 Get-Service | Where-Object { $_.Name -like "postgres*" }
 Start-Service <postgres_service_name>
-Start-Service Redis
 
 # Linux (systemd)
 sudo systemctl start postgresql
-sudo systemctl start redis-server
 
 # macOS (Homebrew)
 brew services start postgresql@16
-brew services start redis
 ```
 
 <div>
@@ -388,13 +371,4 @@ SGRest/
   If you would like to provide feedback or share ideas, you can contact me through my GitHub profile or social media.
   <br><br>
   <b>Note:</b> Some files contain explanatory information in Spanish.
-</p>
-
-<h2 align="center">Cumplimiento legal México</h2>
-
-<p align="center">
-  SGRest está diseñado para operar dentro del marco legal mexicano.
-  La facturación electrónica cumple con el estándar <b>CFDI 4.0</b> timbrado ante el SAT, con IVA al 16% configurable por restaurante.
-  El cálculo de nómina y prestaciones sigue la <b>Ley Federal del Trabajo (LFT)</b>.
-  El manejo de datos personales de usuarios y empleados se apega a la <b>LFPDPPP</b>.
 </p>
