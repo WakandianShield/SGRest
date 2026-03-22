@@ -1,0 +1,17 @@
+{
+  "name": "sgrest-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "SGRest monorepo temporal (backend + frontend + mobile)",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend,mobile -c blue,green,magenta \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:mobile\"",
+    "dev:backend": "npm --prefix backend run start:dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:mobile": "npm --prefix mobile run start",
+    "lint:backend": "npm --prefix backend run lint",
+    "lint:frontend": "npm --prefix frontend run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -90,7 +90,7 @@ SGRest ERP is a full-stack restaurant management platform designed to digitalize
 - Git
 
 **Database**
-- PostgreSQL 15 or higher (running locally or via Docker)
+- PostgreSQL 15 or higher (instalado localmente o en un proveedor administrado)
 
 **Mobile development** *(only if working on the mobile app)*
 - Expo CLI (`npm install -g expo-cli`)
@@ -111,25 +111,273 @@ SGRest ERP is a full-stack restaurant management platform designed to digitalize
 
 <h2 align="center">Installation</h2>
 
-<p align="center"><em>Clone the repository and navigate into the project</em></p>
+<p align="center"><em>Guía rápida para personas sin experiencia (monorepo temporal)</em></p>
+
+Este repositorio contiene **3 proyectos separados** dentro de una misma carpeta para facilitar el desarrollo diario:
+
+- `backend/` (NestJS + Prisma + PostgreSQL)
+- `frontend/` (React + Vite)
+- `mobile/` (React Native + Expo)
+
+Cada carpeta tiene su propio `package.json`, por lo que después puedes moverlas a repos independientes sin romper su instalación.
+
+### 1) Clonar y entrar al proyecto
 
 ```bash
 git clone https://github.com/WakandianShield/SGRest.git
 cd SGRest
 ```
 
+### 2) Instalar dependencias de cada app
+
+Ejecuta estos comandos en este orden:
+
+```bash
+# Backend
+cd backend
+npm install
+
+# Frontend
+cd ../frontend
+npm install
+
+# Mobile
+cd ../mobile
+npm install
+
+# Regresar a la raíz
+cd ..
+```
+
+### 3) Dependencias que se instalaron en este setup
+
+- **Backend (NestJS)**: autenticación (`@nestjs/jwt`, `passport`, `argon2`), tiempo real (`socket.io`), seguridad (`helmet`), validaciones (`class-validator`, `class-transformer`), base de datos (`prisma`, `@prisma/client`).
+- **Frontend (React)**: navegación (`react-router-dom`), llamadas HTTP (`axios`), tiempo real (`socket.io-client`), estado y datos (`zustand`, `@tanstack/react-query`), bundler (`vite`).
+- **Mobile (Expo)**: notificaciones (`expo-notifications`), QR/cámara (`expo-camera`), almacenamiento seguro (`expo-secure-store`), navegación (`@react-navigation/*`), tiempo real (`socket.io-client`).
+
 <br/>
 
 
 <h2 align="center">Database Configuration</h2>
 
-<p align="center"><em>Coming soon</em></p>
+<p align="center"><em>Configuración básica de PostgreSQL + Prisma (backend)</em></p>
+
+### 1) Crea tus archivos de entorno
+
+```bash
+# Backend
+cd backend
+cp .env.example .env
+
+# Frontend
+cd ../frontend
+cp .env.example .env
+
+# Mobile
+cd ../mobile
+cp .env.example .env
+
+# Volver a la raiz
+cd ..
+```
+
+### 2) Ajusta las variables principales
+
+Variables minimas recomendadas:
+
+- `backend/.env`: `DATABASE_URL`, llaves JWT y `CORS_ORIGIN`.
+- `frontend/.env`: `VITE_API_URL` y `VITE_SOCKET_URL`.
+- `mobile/.env`: `EXPO_PUBLIC_API_URL` y `EXPO_PUBLIC_SOCKET_URL`.
+
+En backend, edita la variable `DATABASE_URL` con tus datos reales.
+
+Ejemplo local:
+
+```env
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/sgrest"
+```
+
+### 3) Genera cliente Prisma y aplica migraciones (backend)
+
+```bash
+npx prisma generate
+npx prisma migrate dev --name init
+```
 
 <br/>
 
 <h2 align="center">How to Run</h2>
 
-<p align="center"><em>Coming soon</em></p>
+<p align="center"><em>Ejecutar backend, frontend y app móvil</em></p>
+
+### Opción A: iniciar cada proyecto por separado (recomendado para empezar)
+
+**Terminal 1 (backend):**
+
+```bash
+cd backend
+npm run start:dev
+```
+
+**Terminal 2 (frontend):**
+
+```bash
+cd frontend
+npm run dev
+```
+
+**Terminal 3 (mobile con Expo):**
+
+```bash
+cd mobile
+npm run start
+```
+
+Luego Expo te mostrará opciones para abrir en Android, iOS o web.
+
+### Opción B: comandos desde la raíz
+
+Puedes arrancar los 3 servicios en paralelo con un solo comando:
+
+```bash
+npm run dev
+```
+
+Si prefieres control individual, también existen scripts separados:
+
+```bash
+npm run dev:backend
+npm run dev:frontend
+npm run dev:mobile
+```
+
+### Puertos por defecto
+
+- Backend: `http://localhost:3000/api`
+- Frontend: `http://localhost:5173`
+- Mobile: servidor Expo (puerto asignado por Expo)
+
+### Nota sobre futura separación a 3 repos
+
+Este setup ya está preparado para separarse porque:
+
+- Cada app tiene sus dependencias aisladas.
+- Cada app tiene estructura y scripts propios.
+- No hay dependencias cruzadas obligatorias entre carpetas.
+
+<br/>
+
+<h2 align="center">Deployment (Local + Railway + Cloudflare)</h2>
+
+<p align="center"><em>Guía práctica para tener ambiente local y ambiente publicado</em></p>
+
+## 1) Estrategia recomendada
+
+- **Local**: desarrolla con `npm run dev` desde la raíz.
+- **Railway**: publica **backend** y **frontend** como dos servicios separados desde este mismo monorepo.
+- **Mobile**: no se despliega en Railway; se distribuye con Expo/EAS (la app consume la API publicada).
+
+## 2) Ambiente local (desarrollo)
+
+1. Crea los `.env` (ya existen ejemplos en cada carpeta).
+2. Arranca todo desde la raíz:
+
+```bash
+npm run dev
+```
+
+3. URLs locales:
+
+- Backend: `http://localhost:3000/api`
+- Frontend: `http://localhost:5173`
+- Mobile (Expo): `http://localhost:8081` (o el puerto que indique Expo)
+
+## 3) Despliegue en Railway (monorepo)
+
+En Railway crea un proyecto y agrega **dos servicios** desde el mismo repositorio.
+
+### Servicio 1: backend
+
+- Root Directory: `backend`
+- Build Command: `npm install && npm run prisma:generate && npm run build`
+- Start Command: `npm run prisma:migrate:deploy && npm run start`
+
+Variables de entorno mínimas en Railway para backend:
+
+- `NODE_ENV=production`
+- `PORT=3000`
+- `API_PREFIX=api`
+- `DATABASE_URL=...` (la de Railway PostgreSQL o tu proveedor)
+- `JWT_ACCESS_TOKEN_PRIVATE_KEY=...`
+- `JWT_ACCESS_TOKEN_PUBLIC_KEY=...`
+- `JWT_REFRESH_TOKEN_PRIVATE_KEY=...`
+- `JWT_REFRESH_TOKEN_PUBLIC_KEY=...`
+- `JWT_ACCESS_TOKEN_EXPIRES_IN=15m`
+- `JWT_REFRESH_TOKEN_EXPIRES_IN=7d`
+- `COOKIE_SECURE=true`
+- `CORS_ORIGIN=https://TU_FRONTEND_RAILWAY`
+- `SOCKET_CORS_ORIGIN=https://TU_FRONTEND_RAILWAY`
+- `SENDGRID_API_KEY=...` (si usarás email)
+- `MAIL_FROM=...`
+
+### Servicio 2: frontend
+
+- Root Directory: `frontend`
+- Build Command: `npm install && npm run build`
+- Start Command: `npm run start`
+
+Variables mínimas en Railway para frontend:
+
+- `VITE_API_URL=https://TU_BACKEND_RAILWAY/api`
+- `VITE_SOCKET_URL=https://TU_BACKEND_RAILWAY`
+- `VITE_APP_NAME=SGRest`
+
+## 4) Mantener local y Railway al mismo tiempo
+
+Usa valores distintos por entorno:
+
+- Local: archivos `.env` con `localhost`.
+- Producción (Railway): variables en el panel de Railway con dominios públicos.
+
+Recomendación simple:
+
+- No subas secretos reales al repo.
+- Mantén solo `.env.example` versionados.
+- Cambia `VITE_API_URL` y `VITE_SOCKET_URL` según el entorno.
+
+## 5) ¿Necesito Cloudflare?
+
+No es obligatorio para arrancar en Railway.
+
+Úsalo cuando quieras:
+
+- Dominio personalizado.
+- Mejor capa de seguridad (WAF, rate limiting, bot protection).
+- CDN para frontend estático.
+
+Configuración mínima recomendada con Cloudflare:
+
+1. Apunta DNS de tu dominio a Railway (CNAME al dominio público de cada servicio).
+2. SSL/TLS en `Full (strict)`.
+3. En backend, conserva CORS y Socket.IO permitiendo el dominio real del frontend.
+4. Si usas cookies seguras, `COOKIE_SECURE=true` y siempre HTTPS.
+
+## 6) Comandos útiles para validar antes de deploy
+
+```bash
+# Backend
+cd backend
+npm run build
+npm audit
+
+# Frontend
+cd ../frontend
+npm run build
+
+# Mobile (compatibilidad de SDK)
+cd ../mobile
+npx expo-doctor
+```
 
 <br/>
 
