@@ -374,7 +374,6 @@ SGRest/
 │      ├── analytics/
 │      ├── reports/
 │      ├── inventory/
-│      │   └── styles/
 │      └── admin/
 │          ├── pages/
 │          ├── components/
