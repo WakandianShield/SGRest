@@ -76,7 +76,7 @@ En su núcleo, SGRest prioriza la comunicación en tiempo real, la consistencia 
   | Mobile app | React Native + Expo | Native iOS and Android app |
   | Mobile auth storage | Expo SecureStore | Encrypted JWT storage on mobile devices |
   | Push notifications | Expo Push Notifications | Sound-differentiated push alerts for waiters |
-  | Email & reports | Brevo | Automated weekly PDF reports and alert emails |
+  | Email & reports | Brevo | Welcome emails and auth |
   | Payments | Mercado Pago | For checkout page in SaaS |
   | Production | Railway | Fast low-cost deployment |
   | Future Production | AWS ECS Fargate + RDS | Auto-scaling containers and managed database for production |
