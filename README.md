@@ -37,7 +37,6 @@ En su núcleo, SGRest prioriza la comunicación en tiempo real, la consistencia 
 
 <br/>
 
-
 <h2 align="center">Features</h2>
 
 <p align="center"><em>What SGRest brings to your restaurant</em></p>
