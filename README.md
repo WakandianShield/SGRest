@@ -224,7 +224,8 @@ npm run start
 ### **Terminal mobile:**
 
 ```bash
-npm run start
+# Scan the QR code or start the mobile phone emulator
+npm expo start --clear
 ```
 
 ### Ports
@@ -244,44 +245,55 @@ Verify that the environment variables are correct.
 
 | Variable | Requerida | Ejemplo |
 |---|---|---|
-| `API_PREFIX` | Si | api |
+| `API_PREFIX` | Si | `api` |
 | `API_URL` | Si | `http://localhost:3000/api` |
 | `BREVO_API_KEY` | Si | `replace_with_your_brevo_api_key` |
 | `COOKIE_DOMAIN` | Si | `http://localhost:3000` |
-| `COOKIE_SECURE` | Si | true |
-| `CORS_ORIGIN` | Si | `http://localhost:3000` o URL frontend |
+| `COOKIE_SECURE` | Si | `true` |
+| `CORS_ORIGIN` | Si | `http://localhost:3000` o `URL frontend` |
 | `DATABASE_URL` | Si | `postgresql://postgres:1234@localhost:5432/sgrest_local` |
-| `EMAIL_FROM` | Si | noreply@sgrest.app |
-| `EMAIL_FROM_NAME` | Si | SGRest |
-| `FRONTEND_URL` | Si | `http://localhost:3000` o URL frontend |
-| `GOOGLE_OAUTH_CLIENT_ID` | Si si usas OAuth | replace_with_your_oauth_client_id |
-| `GOOGLE_OAUTH_CLIENT_SECRET` | Si si usas OAuth | replace_with_your_oauth_client_secret |
-| `MICROSOFT_OAUTH_CLIENT_ID` | Si si usas OAuth | replace_with_your_oauth_client_id |
-| `MICROSOFT_OAUTH_CLIENT_SECRET` | Si si usas OAuth | replace_with_your_oauth_client_secret |
-| `APPLE_OAUTH_CLIENT_ID` | Si si usas OAuth | replace_with_your_oauth_client_id |
-| `APPLE_OAUTH_CLIENT_SECRET` | Si si usas OAuth | replace_with_your_oauth_client_secret |
-| `MERCADOPAGO_OAUTH_CLIENT_ID` | Si si usas OAuth | replace_with_your_oauth_client_id |
-| `MERCADOPAGO_OAUTH_CLIENT_SECRET` | Si si usas OAuth | replace_with_your_oauth_client_secret |
-| `JWT_SECRET` | Si | replace_with_your_jwt_secret |
-| `MERCADOPAGO_ACCESS_TOKEN` | Si para pagos SaaS | replace_with_your_mercadopago_access_token |
-| `MERCADOPAGO_PUBLIC_KEY` | Si para pagos SaaS | replace_with_your_mercadopago_public_key |
-| `MERCADOPAGO_WEBHOOK_SECRET` | Si para pagos SaaS | replace_with_your_mercadopago_webhook_secret |
+| `EMAIL_FROM` | Si | `noreply@sgrest.app` |
+| `EMAIL_FROM_NAME` | Si | `SGRest` |
+| `FRONTEND_URL` | Si | `http://localhost:3000` o `URL frontend` |
+| `GOOGLE_OAUTH_CLIENT_ID` | Si si usas OAuth | `replace_with_your_oauth_client_id` |
+| `GOOGLE_OAUTH_CLIENT_SECRET` | Si si usas OAuth | `replace_with_your_oauth_client_secret` |
+| `MICROSOFT_OAUTH_CLIENT_ID` | Si si usas OAuth | `replace_with_your_oauth_client_id` |
+| `MICROSOFT_OAUTH_CLIENT_SECRET` | Si si usas OAuth | `replace_with_your_oauth_client_secret` |
+| `APPLE_OAUTH_CLIENT_ID` | Si si usas OAuth | `replace_with_your_oauth_client_id` |
+| `APPLE_OAUTH_CLIENT_SECRET` | Si si usas OAuth | `replace_with_your_oauth_client_secret` |
+| `MERCADOPAGO_OAUTH_CLIENT_ID` | Si si usas OAuth | `replace_with_your_oauth_client_id` |
+| `MERCADOPAGO_OAUTH_CLIENT_SECRET` | Si si usas OAuth | `replace_with_your_oauth_client_secret` |
+| `JWT_SECRET` | Si | `replace_with_your_jwt_secret` |
+| `MERCADOPAGO_ACCESS_TOKEN` | Si para pagos SaaS | `replace_with_your_mercadopago_access_token` |
+| `MERCADOPAGO_PUBLIC_KEY` | Si para pagos SaaS | `replace_with_your_mercadopago_public_key` |
+| `MERCADOPAGO_WEBHOOK_SECRET` | Si para pagos SaaS | `replace_with_your_mercadopago_webhook_secret` |
 | `NODE_ENV` | Si | `development` o `production` |
-| `PORT` | Recomendado prod | 3000 |
-| `SOCKET_CORS_ORIGIN` | Si | `http://localhost:3000` o URL frontend |
+| `PORT` | Recomendado prod | `3000` |
+| `SOCKET_CORS_ORIGIN` | Si | `http://localhost:3000` o `URL frontend` |
 
 ### .env Frontend
 
 | Variable | Requerida | Ejemplo |
 |---|---|---|
-| `PORT` | Recomendado prod | 8080 |
-| `VITE_API_URL` | Si | Base REST | `http://localhost:3000/api` |
+| `PORT` | Recomendado prod | `8080` |
+| `VITE_API_URL` | Si | `http://localhost:3000/api` |
 | `VITE_APP_NAME` | Si | `SGRest` |
 | `VITE_DEFAULT_LOCALE` | Si | `es-MX` |
 | `VITE_ENABLE_ANALYTICS` | Opcional | `true` |
 | `VITE_ENABLE_DEBUG` | Opcional | `false` |
 | `VITE_MERCADOPAGO_PUBLIC_KEY` | Si para pagos SaaS | `TEST-...` / `APP_USR-...` |
 | `VITE_SOCKET_URL` | Si | `http://localhost:3000` |
+</div>
+
+### .env Mobile
+
+| Variable | Requerida | Ejemplo |
+|---|---|---|
+| `EXPO_PUBLIC_APP_NAME` | Opcional | `SGRest Mobile` |
+| `EXPO_PUBLIC_API_URL` | Si | `http://localhost:3000/api` |
+| `EXPO_PUBLIC_SOCKET_URL` | Si | `http://localhost:3000` |
+| `EXPO_PUBLIC_DEFAULT_LOCALE` | Si | `es-MX` |
+| `EXPO_PUBLIC_ENABLE_DEBUG` | Opcional | `false` |
 </div>
 <br/>
 
